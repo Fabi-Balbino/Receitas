@@ -1,0 +1,54 @@
+
+.Perfil{
+  margin: 0;
+  --border-style: none;
+}
+
+.cardReceita {
+  border: 1px solid #a9a5a57a;
+  border-radius: 25px;
+  box-shadow: 2px 2px 5px #a9a5a547;
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.cardImage{
+  width: 100%;
+  height: 180px; 
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.titulo{
+  color: #042428;
+}
+
+.heart{
+  font-size: 24px; 
+  color: red; 
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.star{
+  font-size: 24px; 
+  color: yellow; 
+  padding: 0 5px 0 0;
+  cursor: pointer;
+}
+
+.descricao {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 3em; /* ajusta se mudar o número de linhas */
+  color: #A9A5A5; 
+  padding-bottom: 5px; 
+}

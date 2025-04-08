@@ -1,0 +1,286 @@
+ion-header{
+    background-color: #ffffff;
+    box-shadow: none;
+    height: 15%;
+    display: flex;
+    align-items: center;   
+}
+
+#main-content{
+    box-shadow: 1px 1px 5px #a9a5a547;
+}
+
+.logo{
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.menuPerfil{
+    --background: #198D9A;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.menuItem{
+    --border-style: none;
+}
+
+.menuLabel, .menuIcon{
+    color: #042428;
+}
+
+.voltar{
+    margin: 2em 20px;
+    color: #042428;
+}
+
+.voltar ion-icon{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.sectionCard{
+    margin: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card{
+    width: auto;
+    max-width: 95%;
+}
+
+.imagem{
+    border: 1px solid #198d9a13;
+    background-color: #198d9a13;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #A9A5A5;
+    display: flex;
+    justify-content: center;
+}
+
+.imagem img{
+    width: auto;
+    border-radius: 20px;
+}
+
+.title{
+    display: flex;
+    margin: 10px 0;
+}
+
+.title ion-title{
+    font-size: 1.5em;
+    color: #042428;
+    padding: 0;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.heart{
+    font-size: 30px; 
+    color: red; 
+    cursor: pointer;
+}
+
+.estrelas{
+    display: flex;
+    align-items: center;
+}
+
+.estrelas p{
+    color:#042428;
+    margin: 0 5px;
+    font-size: 0.8em;
+}
+
+.descricao p{
+    color: #A9A5A5;
+    font-size: 1em;
+}
+
+.tempoPorcao{
+    display: flex;
+    gap: 20px
+}
+
+.tempo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.tempo ion-icon{
+    color:#198D9A;
+    font-size: 20px;
+}
+
+.tempo p{
+    color:#198D9A;
+}
+
+.porcao{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.porcao ion-icon{
+    color:#042428;
+}
+
+.porcao p{
+    color: #042428;
+}
+
+.linha{
+    border: 1px solid #D9D9D9;
+    width: 100%;
+    margin: 1em 0 2em 0;
+}
+
+.ingredientes ion-title, .modoDePreparo ion-title, .deixeComentario ion-title{
+    padding: 0;
+    margin: 0  0 20px 0;
+}
+.secao{
+    border-radius: 5px;
+    padding: 2px;
+    background-color: #0E6A74;
+    color: #ffffff;
+}
+
+.check{
+    margin: 10px 0;
+    flex-wrap: wrap;
+    color: #042428;
+    font-size: 1em;
+    width: 95%;
+    --checkbox-background-checked: #0E6A74;
+    --border-color: #A9A5A5;
+}
+
+.check::part(container) {
+    border: 1px solid #A9A5A5;
+}
+
+.checkRedondo{
+    margin: 10px 0;
+    flex-wrap: wrap;
+    color: #042428;
+    font-size: 1em;
+    width: 100%;
+    --checkbox-background-checked: #0E6A74;
+    --border-color: #A9A5A5;
+}
+
+.checkRedondo ion-label, .check ion-label {
+    white-space: normal !important;
+}
+
+.checkRedondo::part(container) {
+    border-radius: 50%;
+    border: 1px solid #A9A5A5;
+    width: 24px;
+    height: 24px;
+}
+
+.autora{
+    display: flex;
+    margin: 0 10px;
+}
+
+.autora p{
+    color: #042428;
+}
+
+.autora ion-item{
+    width: 100%;
+    --border-style: none;
+}
+
+.linha2{
+    border: 1px solid #D9D9D9;
+    width: 100%;
+    margin: 1em 0 1em 0;
+}
+
+.deixeComentario{
+    margin: 2em 0;
+}
+
+.meuComentario ion-item{
+    --border-style: none;
+    --padding-start: none;
+}
+
+.enviar{
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+}
+
+ion-textarea{
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #A9A5A5;
+    padding: 5px;
+    color: #A9A5A5;
+    --highlight-color-focused: #0e6a74;
+}
+
+.enviar ion-button{
+    color:#ffffff;
+    font-size: small;
+    --background: #0E6A74; 
+    --border-radius: 10px;
+}
+
+.perfilComentario{
+    width: 100%;
+    --border-style: none;
+}
+
+.estrelas ion-icon{
+    font-size: 30px; 
+    color: yellow; 
+    padding: 0 5px 0 0;
+   cursor: pointer;
+}
+
+.comentario .texto .p{
+    color:#042428;
+    font-weight: 100;
+}
+
+.comentarioFooter{
+    display: flex;
+    justify-content: space-between;
+}
+
+.comentarioFooter .data p{
+    font-size: smaller;
+    color: #A9A5A5;
+}
+
+.likes{
+    display: flex;
+    gap: 20px;
+    width: auto;
+}
+
+.like{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: auto;
+    color:#198D9A; 
+    cursor: pointer;
+}
+
+.like p{
+    color:#A9A5A5;
+}

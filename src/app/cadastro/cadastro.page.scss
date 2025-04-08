@@ -1,0 +1,89 @@
+ion-content{
+    --background: #0E6A74;
+}
+
+section{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.logo img{
+    width: 40%;
+}
+
+.cadastro{
+    background-color: #ffffff;
+    border: 1px solid #a9a5a57a;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    min-width: 250px;
+    height: 500px;
+    box-shadow: 2px 2px 5px #a9a5a547;
+    padding: 20px 0 30px 0;
+}
+
+.containerCadastro{
+    height: 100%;
+    margin: 0 30px;
+}
+
+.containerInput{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+}
+
+.campoInput{
+    border: 1px solid #A9A5A5;
+    border-radius: 15px;
+    --border-style: none;
+    margin: 30px 0;
+}
+
+.termos{
+    width: auto;
+    margin: 10px 5px;
+    
+}
+
+ion-checkbox{
+    flex-wrap: wrap;
+    color: #A9A5A5;
+    font-size: small;
+    width: 95%;
+    --checkbox-background-checked: #0E6A74;
+    --border-color: #A9A5A5;
+}
+
+ion-checkbox::part(container) {
+    border: 1px solid #0E6A74;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.btnCadastro{
+    width: 70%;
+   --background: #042428;
+   --border-radius: 8px;
+   color: #ffffff;
+   font-weight: bold;
+}
+

@@ -1,0 +1,107 @@
+ion-content{
+    --background: #0E6A74;
+}
+
+section{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.logo img{
+    width: 40%;
+}
+
+.inputs ion-input{
+    --border-radius: 15px;
+    --border-color: #A9A5A5;
+    --font-size: 0.9em;
+    --color: #A9A5A5;
+    --padding: 0;
+}
+
+.inputs ion-input:focus-within {
+    --border-color: #0e6a74; /* Cor da borda ao focar */
+}
+
+.inputs ion-input:focus-within::part(label) {
+    --color: #0e6a74; /* Cor da label ao focar */
+}
+
+.login{
+    background-color: #ffffff;
+    border: 1px solid #a9a5a57a;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    min-width: 250px;
+    height: auto;
+    box-shadow: 2px 2px 5px #a9a5a547;
+    padding: 50px 0 30px 0;
+}
+
+.containerLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 2em;
+    width: 80%;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    gap: 10px;
+}
+
+.btnLogin{
+    width: 60%;
+   --background: #0E6A74; 
+   --border-radius: 8px;
+   font-weight: bold;
+   
+}
+
+.btnCadastro{
+    width: 70%;
+   --background: #042428;
+   --border-radius: 8px;
+   color: #ffffff;
+   font-weight: bold;
+}
+
+.containerLinha{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    gap: 5px;
+    width: 100%;
+
+}
+
+.linha{
+    border: 1px solid #a9a5a59e;
+    width: 50%;
+    height: 1px;
+}

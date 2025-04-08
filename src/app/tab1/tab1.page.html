@@ -1,0 +1,132 @@
+<ion-menu side="start" menuId="customMenu" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-avatar class="logo">
+        <img src="../../assets/images/icones/iconReceitas.png" alt="">
+      </ion-avatar>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-item routerLink="/tabs/tab4" class="menuPerfil">
+        <ion-avatar slot="start">
+          <img alt="Silhouette of a person's head" src="../../assets/images/perfil/Beatrix.png" />
+        </ion-avatar>
+        <ion-label>Beatrix Kiddo</ion-label>
+      </ion-item>
+
+      <ion-item class="menuItem" (click)="abrirModalNotificacao()">
+        <ion-icon name="notifications" slot="start" class="menuIcon"></ion-icon>
+        <ion-label class="menuLabel">Notificação</ion-label>
+      </ion-item>
+
+      <ion-item class="menuItem" (click)="abrirModalConfiguracao()">
+        <ion-icon name="settings" slot="start" class="menuIcon"></ion-icon>
+        <ion-label class="menuLabel">Configurações</ion-label>
+      </ion-item>
+
+      <ion-item routerLink="/pesquisa" class="menuItem">
+        <ion-icon name="heart" slot="start" style="color: red;"></ion-icon>
+        <ion-label class="menuLabel" >Favoritos</ion-label>
+      </ion-item>
+
+      <ion-item routerLink="/login" class="menuItem">
+        <ion-icon name="log-out" slot="start" style="color: rgb(123, 4, 4);"></ion-icon>
+        <ion-label style="color: rgb(123, 4, 4);">Sair</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-header id="main-content">
+  <ion-buttons>
+    <ion-avatar class="logo" (click)="openMenu()">
+      <img src="../../assets/images/icones/iconReceitas.png" alt="">
+    </ion-avatar>
+  </ion-buttons>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <section class="recentes">
+    <ion-toolbar>
+      <ion-title size="large">Recentes</ion-title>
+    </ion-toolbar>
+  
+    <div class="slide-container-horizontal">
+      <div class="slide" *ngFor="let recente of recentes" (click)="abrirDetalhes()">
+        <app-recipe-card
+          [userName]="recente.usuario"
+          [userImage]="recente.fotoUsuario"
+          [recipeTitle]="recente.titulo"
+          [recipeImage]="recente.fotoReceita"
+          [recipeDescription]="recente.descricao"
+          [rating]="recente.avaliacao">
+        </app-recipe-card>
+      </div>
+    </div>
+  </section>
+
+  <div class="linha"></div>
+
+  <section>
+    <ion-toolbar>
+      <ion-title size="large">Mais pesquisados</ion-title>
+    </ion-toolbar> 
+    <div class="slide-container-horizontal">
+      <div class="slide" *ngFor="let pesquisa of pesquisados" (click)="abrirDetalhes()">
+        <app-recipe-card
+          [userName]="pesquisa.usuario"
+          [userImage]="pesquisa.fotoUsuario"
+          [recipeTitle]="pesquisa.titulo"
+          [recipeImage]="pesquisa.fotoReceita"
+          [recipeDescription]="pesquisa.descricao"
+          [rating]="pesquisa.avaliacao">
+        </app-recipe-card>
+      </div>
+    </div>
+  </section>
+
+  <div class="linha"></div>
+
+  <section>
+    <ion-toolbar>
+      <ion-title size="large">Favoritos</ion-title>
+    </ion-toolbar> 
+    <div class="slide-container-horizontal">
+      <div class="slide" *ngFor="let favorito of favoritos" (click)="abrirDetalhes()">
+        <app-recipe-card
+          [userName]="favorito.usuario"
+          [userImage]="favorito.fotoUsuario"
+          [recipeTitle]="favorito.titulo"
+          [recipeImage]="favorito.fotoReceita"
+          [recipeDescription]="favorito.descricao"
+          [rating]="favorito.avaliacao">
+        </app-recipe-card>
+      </div>
+    </div>
+  </section>
+
+  <div class="linha"></div>
+
+  <section>
+    <ion-toolbar>
+      <ion-title size="large">Você pode gostar</ion-title>
+    </ion-toolbar> 
+    <div class="slide-container-horizontal">
+      <div class="slide" *ngFor="let sugestao of sugestoes" (click)="abrirDetalhes()">
+        <app-recipe-card
+          [userName]="sugestao.usuario"
+          [userImage]="sugestao.fotoUsuario"
+          [recipeTitle]="sugestao.titulo"
+          [recipeImage]="sugestao.fotoReceita"
+          [recipeDescription]="sugestao.descricao"
+          [rating]="sugestao.avaliacao">
+        </app-recipe-card>
+      </div>
+    </div>
+  </section>
+
+  <div class="linha"></div>
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-content [fullscreen]="true" style="background-color: #0E6A74;">
+  <section>
+
+    <div class="logo" routerLink="/login">
+      <img src="../../assets/images/icones/logoLogin.png" alt="Logo do aplicativo. Uma mão segurando uma bandeja com uma cloche em cima.">
+    </div>
+
+    <div class="cadastro">
+      <div class="containerCadastro">
+
+        <div class="containerInputs">
+          <ion-item class="campoInput">
+            <ion-icon name="person-outline" slot="start" class="iconInput"></ion-icon>
+            <ion-input placeholder="nome"></ion-input>
+          </ion-item>
+        </div>
+    
+        <div class="containerInputs">
+          <ion-item class="campoInput">
+            <ion-icon name="calendar-outline" slot="start" class="iconInput"></ion-icon>
+            <ion-input type="date" placeholder="" class="ocultardate" ></ion-input>
+          </ion-item>
+        </div>
+    
+        <div class="containerInputs">
+          <ion-item class="campoInput">
+            <ion-icon name="mail-outline" slot="start" class="iconInput"></ion-icon>
+            <ion-input placeholder="email" ></ion-input>
+          </ion-item>
+        </div>
+    
+        <div class="containerInputs">
+          <ion-item class="campoInput">
+            <ion-icon name="lock-closed-outline" slot="start" class="iconInput"></ion-icon>
+            <ion-input placeholder="senha" type="password" ></ion-input>
+          </ion-item>
+        </div>
+
+        <div class="termos">
+          <ion-checkbox label-placement="end">Li e concordo com os Termos de Uso 
+            e Políticas de Privacidade.</ion-checkbox>
+        </div>
+
+        <div class="botoes">
+          <ion-button class="btnCadastro" (click)="realizarCadastro()">cadastre-se</ion-button>
+        </div>
+
+      </div>
+      
+    </div>
+
+  </section>
+</ion-content>

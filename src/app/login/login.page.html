@@ -1,0 +1,33 @@
+<ion-content [fullscreen]="true" style="background-color: #0E6A74;">
+  <section>
+
+    <div class="logo">
+      <img src="../../assets/images/icones/logoLogin.png" alt="Logo do aplicativo. Uma mão segurando uma bandeja com uma cloche em cima.">
+    </div>
+
+    <div class="login">
+      <div class="containerLogin">
+
+        <div class="inputs">
+          <ion-input label="Email" type="email" label-placement="floating" fill="outline" placeholder="Email"></ion-input>
+          <ion-input  label="Senha" type="password" label-placement="floating" fill="outline" placeholder="Senha"></ion-input>
+        </div>
+        
+        <p style="color: #0E6A74; font-size: 0.9em; cursor: pointer;">Esqueci a senha</p>
+
+        <div class="botoes">
+          <ion-button class="btnLogin" routerLink="/tabs/tab1">Entrar</ion-button>
+          <ion-button class="btnCadastro" routerLink="/cadastro">cadastre-se</ion-button>
+        </div>
+        
+        <div class="containerLinha">
+          <div class="linha"></div><p style="color: #A9A5A5;">ou</p><div class="linha"></div>
+        </div>
+
+        <p routerLink="/tabs/tab1" style="color: #0E6A74; font-weight: bold; cursor: pointer;">Continuar como visitante</p>
+
+      </div>
+    </div>
+
+  </section>
+</ion-content>

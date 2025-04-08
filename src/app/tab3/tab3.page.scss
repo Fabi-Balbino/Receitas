@@ -1,0 +1,81 @@
+ion-header{
+    background-color: #ffffff;
+    box-shadow: none;
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+
+#main-content{
+    box-shadow: 1px 1px 5px #a9a5a547;
+    margin-bottom: 25px;
+}
+
+.logo{
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+ion-title{
+    color: #042428;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-left: 2%;
+}
+
+.linha{
+    border: 1px solid #D9D9D9;
+    margin: 2em 0 2em 0;
+}
+
+.menuPerfil{
+    --background: #198D9A;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.menuItem{
+    --border-style: none;
+}
+
+.menuLabel, .menuIcon{
+    color: #042428;
+}
+
+.card-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.cardReceitaAdd {
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.circulo{
+    width: 15em;
+    height: 15em;
+    --background: #198d9a4c;
+    --border-radius: 100%;
+    --box-shadow: none;
+}
+
+.plus{
+    color: #198D9A;
+    font-size: 5em;
+}
+
+.textAdd{
+    color: #a9a5a5;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-align: center;
+}

@@ -1,0 +1,157 @@
+.voltar{
+    margin: 2em 20px;
+    color: #042428;
+}
+
+.voltar ion-icon{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+section{
+    margin: 5px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+section ion-title{
+    padding: 0;
+}
+
+.titulo{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.formulario{
+    width: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.imagem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.containerImagem{
+    border: 1px solid #A9A5A5;
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    padding: 20px;
+    box-shadow: 2px 2px 5px #a9a5a553;
+}
+
+.upload-imagem {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+
+input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.botao-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #198d9a37;
+    color: #198D9A;
+    padding: 10px 10px;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    font-size: 2.5em;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+    font-weight: 500;
+}
+
+.preview {
+    margin-top: 12px;
+    max-width: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+}
+
+.input input{
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #A9A5A5;
+    color: #042428;
+    outline-color: #198D9A;
+}
+
+.tempoPorcao{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tempo{
+    width: 48%;
+}
+
+.campoInput{
+    border: 1px solid #A9A5A5;
+    border-radius: 15px;
+    --border-style: none;
+}
+
+ion-textarea{
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #A9A5A5;
+    padding: 10px;
+    --highlight-color-focused: #198D9A;
+}
+
+.botao, .btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.botao ion-button{
+    width: 100%;
+   --background: #198d9a7b;
+   --border-radius: 8px;
+   color: #ffffff;
+   font-weight: bold;
+   --box-shadow: 2px 4px 5px #a9a5a56b;
+   text-transform: capitalize;
+}
+
+.btn ion-button{
+    width: 100%;
+    --background: #042428;
+    --border-radius: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    --box-shadow: 2px 4px 5px #a9a5a56b;
+    text-transform: capitalize;
+}
+
