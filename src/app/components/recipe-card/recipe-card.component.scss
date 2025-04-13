@@ -43,6 +43,17 @@
   cursor: pointer;
 }
 
+.estrelas{
+  display: flex;
+  align-items: center;
+}
+
+.estrelas p{
+  color:#042428;
+  margin: 0 5px;
+  font-size: 0.8em;
+}
+
 .descricao {
   display: -webkit-box;
   -webkit-box-orient: vertical;

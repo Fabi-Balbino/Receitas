@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MenuController, ModalController } from '@ionic/angular';
 import { ModalNotificacaoComponent } from '../modal-notificacao/modal-notificacao.component';
 import { ModalConfiguracaoComponent } from '../modal-configuracao/modal-configuracao.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab2',
@@ -11,12 +12,13 @@ import { ModalConfiguracaoComponent } from '../modal-configuracao/modal-configur
 })
 export class Tab2Page {
 
-  constructor(private menuCtrl: MenuController, private modalCtrl: ModalController
+  constructor(private menuCtrl: MenuController, 
+              private modalCtrl: ModalController,
+              public router: Router
   ) {}
 
   openMenu() {
-    this.menuCtrl.enable(true, 'customMenu'); // Ativa o menu se estiver desativado
-    this.menuCtrl.open('customMenu'); //
+    this.menuCtrl.open('customMenu');
   }
   
   async abrirModalNotificacao() {
@@ -35,5 +37,9 @@ export class Tab2Page {
     });
 
     await modal.present();
+  }
+
+  abrirCategoria(categoria: string) {
+    this.router.navigate(['/tabs/categoria', categoria]);
   }
 }

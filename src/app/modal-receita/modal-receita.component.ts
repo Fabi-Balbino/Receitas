@@ -40,6 +40,18 @@ export class ModalReceitaComponent  implements OnInit {
     await alert.present();
   }
   
+  ingredientes: string[] = [''];
+
+  adicionarIngrediente() {
+    this.ingredientes.push('');
+  }
+
+  preparos: string[] = [''];
+
+  adicionarPreparo() {
+    this.preparos.push('');
+  }
+
   ngOnInit() {}
 
 }

@@ -1,0 +1,39 @@
+ion-header{
+    background-color: #ffffff;
+    box-shadow: none;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#main-content{
+    box-shadow: 1px 1px 5px #a9a5a547;
+}
+
+.logo{
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.menuPerfil{
+    --background: #198D9A;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.menuItem{
+    --border-style: none;
+}
+
+ion-item.menuItem:hover {
+    --background: #198d9a21;
+    transition: background 0.2s ease;
+    cursor: pointer;
+}
+
+
+.menuLabel, .menuIcon{
+    color: #042428;
+}

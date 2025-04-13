@@ -1,4 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-recipe-card',
@@ -8,16 +11,28 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class RecipeCardComponent  implements OnInit {
 
-  constructor() { }
+  constructor(private navCtrl: NavController){}
+
+  @Input() receita: any;
+
+  @Input() userName!: string;
+  @Input() userImage!: string;
+  @Input() recipeTitle!: string;
+  @Input() recipeImage!: string;
+  @Input() recipeDescription!: string;
+  @Input() recipeRating?: number;
+  @Input() rating!: number;
+  @Input() id!: number;
+  
+  irParaDetalhes() {
+    if (!this.id) {
+      console.warn('Receita sem ID');
+      return;
+    }
+    this.navCtrl.navigateForward(`/tabs/detalhe-receita/${this.id}`);
+  }
 
   ngOnInit() {}
-
-  @Input() userName: string = '';
-  @Input() userImage: string = '';
-  @Input() recipeTitle: string = '';
-  @Input() recipeImage: string = '';
-  @Input() recipeDescription: string = '';
-  @Input() rating: number = 0;
 
   favorito: boolean = false;
 

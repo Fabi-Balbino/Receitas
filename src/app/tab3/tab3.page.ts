@@ -22,8 +22,7 @@ export class Tab3Page {
   ) {}
 
   openMenu() {
-    this.menuCtrl.enable(true, 'customMenu'); // Ativa o menu se estiver desativado
-    this.menuCtrl.open('customMenu'); //
+    this.menuCtrl.open('customMenu');
   }
 
   async abrirModal() {
@@ -53,50 +52,56 @@ export class Tab3Page {
     await modal.present();
   }
 
-  abrirDetalhes() {
-    this.router.navigate(['/receitas']);
-  }
-
   receitas = [
     {
+      id: 10,
       usuario: 'Beatrix Kiddo',
       fotoUsuario: '../../assets/images/perfil/Beatrix.png',
       titulo: 'Suco Verde',
       fotoReceita: '../../assets/images/receita/sucoVerde.png',
       descricao: 'Suco verde detox com couve e limão.',
-      avaliacao: 5
+      avaliacao: 5,
+      quantAvaliacao: 10
     },
     {
+      id: 11,
       usuario: 'Beatrix Kiddo',
       fotoUsuario: '../../assets/images/perfil/Beatrix.png',
       titulo: 'Brownie de Chocolate',
       fotoReceita: '../../assets/images/receita/brownie.png',
       descricao: 'Brownie macio com sabor intenso de chocolate.',
-      avaliacao: 4
+      avaliacao: 4,
+      quantAvaliacao: 12
     },
     {
+      id: 12,
       usuario: 'Beatrix Kiddo',
       fotoUsuario: '../../assets/images/perfil/Beatrix.png',
       titulo: 'Pudim',
       fotoReceita: '../../assets/images/receita/pudim.png',
       descricao: 'Pudim lisinho de leite condensado com calda de caramelo.',
-      avaliacao: 5
+      avaliacao: 5,
+      quantAvaliacao: 33
     },
     {
+      id: 13,
       usuario: 'Beatrix Kiddo',
       fotoUsuario: '../../assets/images/perfil/Beatrix.png',
       titulo: 'Cuscuz',
       fotoReceita: '../../assets/images/receita/cuscuz.png',
       descricao: 'Cuscuz fofinho, perfeito para comer com manteiga.',
-      avaliacao: 5
+      avaliacao: 5,
+      quantAvaliacao: 50
     },
     {
+      id: 3,
       usuario: 'Beatrix Kiddo',
       fotoUsuario: '../../assets/images/perfil/Beatrix.png',
       titulo: 'Mousse de Maracujá',
       fotoReceita: '../../assets/images/receita/mousseMaracuja.png',
       descricao: 'Mousse de maracujá com leite condensado.',
-      avaliacao: 4
+      avaliacao: 4,
+      quantAvaliacao: 45
     },
     
   ];

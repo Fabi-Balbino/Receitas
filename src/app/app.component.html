@@ -1,3 +1,44 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="start" menuId="customMenu" contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-avatar class="logo">
+          <img src="assets/images/icones/iconReceitas.png" alt="">
+        </ion-avatar>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-item routerLink="/tabs/tab4" class="menuPerfil">
+          <ion-avatar slot="start">
+            <img src="assets/images/perfil/Beatrix.png" />
+          </ion-avatar>
+          <ion-label>Beatrix Kiddo</ion-label>
+        </ion-item>
+
+        <ion-item class="menuItem" (click)="abrirModalNotificacao()">
+          <ion-icon name="notifications" slot="start" class="menuIcon"></ion-icon>
+          <ion-label class="menuLabel">Notificação</ion-label>
+        </ion-item>
+
+        <ion-item class="menuItem" (click)="abrirModalConfiguracao()">
+          <ion-icon name="settings" slot="start" class="menuIcon"></ion-icon>
+          <ion-label class="menuLabel">Configurações</ion-label>
+        </ion-item>
+
+        <ion-item  class="menuItem" (click)="router.navigate(['/tabs/categoria/favoritos'])">
+          <ion-icon name="heart" slot="start" style="color: red;"></ion-icon>
+          <ion-label class="menuLabel">Favoritos</ion-label>
+        </ion-item>
+
+        <ion-item (click)="logout()"  class="menuItem">
+          <ion-icon name="log-out" slot="start" style="color: rgb(123, 4, 4);"></ion-icon>
+          <ion-label style="color: rgb(123, 4, 4);">Sair</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
 </ion-app>

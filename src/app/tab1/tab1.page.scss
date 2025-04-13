@@ -3,14 +3,14 @@
     overflow-x: auto;
     gap: 16px;
     padding: 16px;
-    scroll-snap-type: x mandatory; /* opcional para efeito suave de scroll */
+    scroll-snap-type: x mandatory; /* para efeito suave de scroll */
 }
   
 .slide {
     flex: 0 0 auto;
     min-width: 250px;
     max-width: 300px;
-    scroll-snap-align: start; /* opcional, funciona com o scroll-snap acima */
+    scroll-snap-align: start; /* funciona com o scroll-snap acima */
     height: auto;
 }
 

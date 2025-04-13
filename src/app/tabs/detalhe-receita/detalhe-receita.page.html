@@ -1,0 +1,84 @@
+<ion-header id="main-content">
+    <ion-buttons>
+      <ion-avatar class="logo" (click)="openMenu()">
+        <img src="../../assets/images/icones/iconReceitas.png" alt="">
+      </ion-avatar>
+    </ion-buttons>
+  </ion-header>
+
+<ion-content [fullscreen]="true">
+    <div class="voltar">
+        <ion-icon name="arrow-back" (click)="voltar()"></ion-icon>
+    </div>
+
+    <section class="sectionCard">
+        <div class="card">
+            <div class="imagem">
+                <img [src]="receita?.imagem" alt="">
+            </div>
+            <div class="title">
+                <ion-title>{{ receita?.titulo }}</ion-title>
+                <ion-icon [name]="favorito ? 'heart' : 'heart-outline'" (click)="toggleFavorito()" class="heart">></ion-icon>
+            </div>
+            <div class="estrelas">
+                <ion-icon *ngFor="let star of stars; let i = index" [name]="i < rating ? 'star' : 'star-outline'"
+                    (click)="setRating(i + 1); $event.stopPropagation()" class="star">
+                </ion-icon>
+                <p>({{ receita?.avaliacao }})</p>
+            </div>
+            <div class="descricao">
+                <p>{{ receita?.descricao }}</p>
+            </div>
+            <div class="tempoPorcao">
+                <div class="tempo">
+                  <ion-icon name="time"></ion-icon>
+                  <p>{{ receita?.tempo }}</p>
+                </div>
+                <div class="porcao">
+                  <ion-icon name="person-outline"></ion-icon>
+                  <p>{{ receita?.porcao }}</p>
+                </div>
+            </div>
+
+            <div class="linha"></div>
+
+            <!-- Ingredientes -->
+            <div class="ingredientes">
+                <ion-title>Ingredientes</ion-title>
+                <div class="checks">
+                <ion-checkbox *ngFor="let ingrediente of receita?.ingredientes" labelPlacement="end" class="check">
+                    <ion-label>{{ ingrediente }}</ion-label>
+                </ion-checkbox>
+                </div>
+            </div>
+
+            <div class="linha"></div>
+
+            <!-- Modo de Preparo -->
+            <div class="modoDePreparo">
+                <ion-title>Modo de preparo</ion-title>
+                <div class="checks">
+                <ion-checkbox *ngFor="let passo of receita?.preparo" labelPlacement="end" class="checkRedondo">
+                    <ion-label>{{ passo }}</ion-label>
+                </ion-checkbox>
+                </div>
+            </div>
+
+            <div class="linha2"></div>
+                      
+            <!-- Autor -->
+            <div class="autora">
+                <p>Por</p>
+                <ion-item>
+                <ion-avatar slot="start">
+                    <img [src]="receita?.autor.imagem" />
+                </ion-avatar>
+                <ion-label>{{ receita?.autor.nome }}</ion-label>
+                </ion-item>
+            </div>
+      
+            <div class="linha2"></div>
+
+        </div>
+    </section>
+</ion-content>

@@ -15,21 +15,6 @@ ion-header{
     cursor: pointer;
 }
 
-.menuPerfil{
-    --background: #198D9A;
-    color: #ffffff;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.menuItem{
-    --border-style: none;
-}
-
-.menuLabel, .menuIcon{
-    color: #042428;
-}
-
 .voltar{
     margin: 2em 20px;
     color: #042428;
@@ -284,3 +269,23 @@ ion-textarea{
 .like p{
     color:#A9A5A5;
 }
+
+.title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px; /* espaço entre o título e o coração */
+    margin-bottom: 8px;
+  }
+  
+.titulo-wrapper {
+    flex: 1 1 auto; /* permite que quebre a linha quando necessário */
+    min-width: 0;   /* evita overflow */
+}
+  
+ion-title {
+    font-size: 22px;
+    word-break: break-word;
+    white-space: normal;
+}
+  

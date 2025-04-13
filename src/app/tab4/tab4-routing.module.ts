@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: Tab4Page
+  },
+  {
+    path: 'categoria/:categoria',
+    loadChildren: () => import('../tabs/categoria/categoria.module').then(m => m.CategoriaPageModule)
   }
 ];
 

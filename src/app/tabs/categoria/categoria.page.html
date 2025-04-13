@@ -47,7 +47,7 @@
   </ion-buttons>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content>
   <div class="containerPesquisa">
     <ion-item class="campoPesquisa">
       <ion-icon name="search-outline" slot="start"></ion-icon>
@@ -57,7 +57,7 @@
 
   <div class="slide-container">
     <div class="slide">
-      <ion-card class="cardPesquisa">
+      <ion-card class="cardPesquisa" (click)="irParaCategoria('acompanhamento')">
         <ion-card-header>
           <ion-avatar>
             <img src="../../assets/images/icones/acompanhamento.png" alt="">
@@ -67,7 +67,7 @@
       </ion-card>
     </div>
     <div class="slide">
-      <ion-card class="cardPesquisa">
+      <ion-card class="cardPesquisa" (click)="irParaCategoria('bebidas')">
         <ion-card-header>
           <ion-avatar>
             <img src="../../assets/images/icones/bebidas.png" alt="">
@@ -77,7 +77,7 @@
       </ion-card>
     </div>
     <div class="slide">
-      <ion-card class="cardPesquisa">
+      <ion-card class="cardPesquisa" (click)="irParaCategoria('carnes')">
         <ion-card-header>
           <ion-avatar>
             <img src="../../assets/images/icones/carnes.png" alt="">
@@ -87,7 +87,7 @@
       </ion-card>
     </div>
     <div class="slide">
-      <ion-card class="cardPesquisa">
+      <ion-card class="cardPesquisa" (click)="irParaCategoria('doces')">
         <ion-card-header>
           <ion-avatar>
             <img src="../../assets/images/icones/doces.png" alt="">
@@ -97,7 +97,7 @@
       </ion-card>
     </div>
     <div class="slide">
-      <ion-card class="cardPesquisa">
+      <ion-card class="cardPesquisa" (click)="irParaCategoria('lanches')">
         <ion-card-header>
           <ion-avatar>
             <img src="../../assets/images/icones/lanches.png" alt="">
@@ -107,7 +107,7 @@
       </ion-card>
     </div>
     <div class="slide">
-      <ion-card class="cardPesquisa">
+      <ion-card class="cardPesquisa" (click)="irParaCategoria('massas')">
         <ion-card-header>
           <ion-avatar>
             <img src="../../assets/images/icones/massas.png" alt="">
@@ -117,7 +117,7 @@
       </ion-card>
     </div>
     <div class="slide">
-      <ion-card class="cardPesquisa">
+      <ion-card class="cardPesquisa" (click)="irParaCategoria('molhos')">
         <ion-card-header>
           <ion-avatar>
             <img src="../../assets/images/icones/molhos.png" alt="">
@@ -127,7 +127,7 @@
       </ion-card>
     </div>
     <div class="slide">
-      <ion-card class="cardPesquisa">
+      <ion-card class="cardPesquisa" (click)="irParaCategoria('saladas')">
         <ion-card-header>
           <ion-avatar>
             <img src="../../assets/images/icones/saladas.png" alt="">
@@ -136,37 +136,49 @@
         </ion-card-header>
       </ion-card>
     </div>
+    <div class="slide">
+      <ion-card class="cardPesquisa" (click)="irParaCategoria('principal')">
+        <ion-card-header>
+          <ion-avatar>
+            <img src="../../assets/images/icones/pratoPrincipal.png" alt="">
+          </ion-avatar>
+          <ion-card-title>Prato Principal</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </div>
   </div>
   
   <div class="linha"></div>
 
   <section>
-    <div class="voltar">
-      <ion-icon name="arrow-back" routerLink="/tabs/tab2"></ion-icon>
-    </div>
+   
     <ion-toolbar>
-      <ion-title size="large">Doces</ion-title>
+      <ion-title>{{ categoria | titlecase }}</ion-title>
     </ion-toolbar>
-  
+    
+
     <ion-grid>
-      <ion-row class="ion-justify-content-center">
-        <!-- Cards de receitas com component -->
+      <ion-row>
         <ion-col
-          *ngFor="let doce of doces"
+          *ngFor="let r of receitas"
           size="12"
           size-md="6"
-          size-lg="3" (click)="abrirDetalhes()" class="card-col">
+          size-lg="3"
+          class="card-col">
           <app-recipe-card
-            [userName]="doce.usuario"
-            [userImage]="doce.fotoUsuario"
-            [recipeTitle]="doce.titulo"
-            [recipeImage]="doce.fotoReceita"
-            [recipeDescription]="doce.descricao"
-            [rating]="doce.avaliacao">
+            [id]="r.id"
+            [userName]="r.usuario"
+            [userImage]="r.fotoUsuario"
+            [recipeTitle]="r.titulo"
+            [recipeImage]="r.fotoReceita"
+            [recipeDescription]="r.descricao"
+            [rating]="r.avaliacao"
+            [recipeRating]="r.quantAvaliacao">
           </app-recipe-card>
         </ion-col>
       </ion-row>
     </ion-grid>
-
+    
   </section>
+
 </ion-content>

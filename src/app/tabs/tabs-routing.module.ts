@@ -27,7 +27,16 @@ const routes: Routes = [
         path: '',
         redirectTo: '/login',
         pathMatch: 'full'
+      },
+      {
+        path: 'categoria',
+        loadChildren: () => import('./categoria/categoria.module').then( m => m.CategoriaPageModule)
+      },
+      {
+        path: 'detalhe-receita/:id',
+        loadChildren: () => import('./detalhe-receita/detalhe-receita.module').then(m => m.DetalheReceitaPageModule)
       }
+      
     ]
   },
   {
@@ -39,6 +48,8 @@ const routes: Routes = [
     path: 'tab4',
     loadChildren: () => import('../tab4/tab4.module').then( m => m.Tab4PageModule)
   }
+ 
+ 
 ];
 
 @NgModule({

@@ -18,10 +18,9 @@ export class Tab4Page implements OnInit {
   constructor(private menuCtrl: MenuController,
     private modalCtrl: ModalController
   ) {}
-
+  
   openMenu() {
-    this.menuCtrl.enable(true, 'customMenu'); // Ativa o menu se estiver desativado
-    this.menuCtrl.open('customMenu'); //
+    this.menuCtrl.open('customMenu');
   }
 
   async abrirModalNotificacao() {
